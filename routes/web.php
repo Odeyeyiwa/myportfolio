@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/omotoyosi-odeyeyiwa-portfolio', function () {
+Route::get('/', function () {
     return view('index');
 });
 Route::POST('/submitcontact', 'portfolio@saveMessage');
