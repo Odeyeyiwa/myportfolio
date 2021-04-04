@@ -41,4 +41,8 @@ class portfolio extends Controller
         $output= Service::all();
         return view('adminview',['output'=>$output]);
     }
+
+    function loadPage() {
+        return view('index');
+    }
 }

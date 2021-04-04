@@ -13,16 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'portfolio@loadPage');
 Route::POST('/submitcontact', 'portfolio@saveMessage');
 Route::POST('/submitservice', 'portfolio@saveService');
 Route::get('/admin', 'portfolio@viewContact')->middleware('auth');
 Route::get('/add', 'portfolio@viewService')->middleware('auth');
 
 Auth::routes();
-Route::get('/',function (){
-    return view('welcome');
-});
+// Route::get('/',function (){
+//     return view('welcome');
+// });
 Route::get('/home', 'HomeController@index')->name('home');
