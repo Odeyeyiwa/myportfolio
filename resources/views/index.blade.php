@@ -68,6 +68,16 @@
 					#project{
 						background-color: rgb(212,212,212);
 					}
+					body{
+						overflow-x: hidden;
+						overflow-y: auto;
+					}
+					@media all and (min-width:320px) and (max-width:425px){
+						body{
+						overflow-x: hidden;
+						overflow-y: auto;
+					}	
+					}
 
 				</style>
 				<link rel="stylesheet" type="text/css" href="<?php echo asset('bootstrap.css');?>">
@@ -75,32 +85,32 @@
 	</head>
 	<body>
 	<div class="container-fluid p-0">
-		<div class="container-fluid fixed-top" id="home">
+		<div class="container-fluid sticky-top" id="home">
 			<nav class="navbar navbar-expand-md navbar-dark">
 				<div class="container-fluid">
-					<a class="navbar-brand fw-bolder" href="#top" style="font-family:montserrat;color:white;font-size:30px;"><span class="text-danger">O</span>MOTOYOSI.</a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<a class="navbar-brand fw-bolder" href="<?php echo url('/');?>" style="font-family:montserrat;color:white;font-size:30px;"><span class="text-danger">O</span>MOTOYOSI.</a>
+				  <button class="navbar-toggler tug" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				  </button>
 				  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-					<ul class="navbar-nav align-item-end">
+					<ul class="navbar-nav me-auto align-item-end">
 						<li class="nav-item active">
-						  <a class="nav-link text-white ml-2" style="font-weight: bold" href="#top">Home<span class="sr-only">(current)</span></a>
+						  <a class="nav-link text-white ml-2" style="font-weight: bold" href="<?php echo url('/');?>">Home<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-						  <a class="nav-link text-white ml-2" style="font-weight: bold" href="#about">About</a>
+						  <a class="nav-link text-white ml-2 navs" style="font-weight: bold" href="#about">About</a>
 						</li>
 						<li class="nav-item">
-						  <a class="nav-link text-white ml-2" style="font-weight: bold" href="#skills">Skills</a>
+						  <a class="nav-link text-white ml-2 navs" style="font-weight: bold" href="#skills">Skills</a>
 						</li>
 						<li class="nav-item">
-						  <a class="nav-link text-white ml-2" style="font-weight: bold" href="#experience">Experience</a>
+						  <a class="nav-link text-white ml-2 navs" style="font-weight: bold" href="#experience">Experience</a>
 						</li>
 						<li class="nav-item">
-						  <a class="nav-link text-white ml-2" style="font-weight: bold" href="#project">Projects</a>
+						  <a class="nav-link text-white ml-2 navs" style="font-weight: bold" href="#project">Projects</a>
 						</li>
 						<li class="nav-item">
-						  <a class="nav-link text-white ml-2" href="#contact"><i class="fa fa-envelope"></i></a>
+						  <a class="nav-link text-white ml-2 navs" href="#contact"><i class="fa fa-envelope"></i></a>
 						</li>
 						<li class="nav-item text-white">
 						  <a class="btn btn-light btn-sm ml-2" href="#"
@@ -168,10 +178,10 @@
 
 		<div class="container-fluid" id="experience">
 			<div class="row text-white">
-				<div class="col-md-5 col-10 offset-1 m-auto">
+				<div class="col-md-5 col-10 offset-1 m-auto pt-md-5">
 					<h1 class="text-danger">EXPERIENCE</h1>
 					<p class="text-white p-2">I am a full stack web developer, my area of expertise is PHP, although i am also knowledgeable on both front end
-						(that is the client aspect of the web) and back end. Asides from knowing the likes of HTML, CSS, JAVASCRIPT, REACT, JQUERY, AJAX, PHP, etc. i also have skills in graphic designing with the likes of canvas. I can build fully responsive web applications. Visit my <a href="https://www.linkedin.com/in/omotoyosi-odeyeyiwa-977ab6183/"><i class="fab fa-linkedin lass"></i></a> for more details, you can also check some of my other works out on my github <a href="https://github.com/Odeyeyiwa" class="text-white"><i class="fab fa-github" style="font-size: 2vw;"></i></a> or you can also just choose to <a href="mailto:omotoyosi.odeyeyiwa@gmail.com"><i class="fa fa-envelope lass"></i></a> me for any other additional information. I am available for freelance work, collaborations, employment and different programming opportunities.</p>
+						(that is the client aspect of the web) and back end.<br><br> Asides from knowing the likes of HTML, CSS, JAVASCRIPT, REACT, JQUERY, AJAX, PHP, etc. i also have skills in graphic designing with the likes of canvas. I can build fully responsive web applications.<br><br> Visit my <a href="https://www.linkedin.com/in/omotoyosi-odeyeyiwa-977ab6183/"><i class="fab fa-linkedin lass"></i></a> for more details, you can also check some of my other works out on my github <a href="https://github.com/Odeyeyiwa" class="text-white"><i class="fab fa-github" style="font-size: 2vw;"></i></a> or you can also just choose to <a href="mailto:omotoyosi.odeyeyiwa@gmail.com"><i class="fa fa-envelope lass"></i></a> me for any other additional information.<br><br> I am available for freelance work, collaborations, employment and different programming opportunities.</p>
 				</div>
 				<div class="col-md-5 col-10 offset-1 text-white">
 			    	<img src="<?php echo asset('images/red.gif');?>" alt="" class="img-fluid">
@@ -198,9 +208,9 @@
 				</div>
 			</div>
 		</div>
-			<div class="container-fluid p-0 m-0" id="project">
-				<h1 class="col-md-12 text-center text-danger px-5 pt-5 pb-1">PROJECTS</h1>
-				<h5 class="text-center pb-4">Check out some of my projects i created for fun</h5>
+			<div class="container-fluid pt-5" id="project">
+				<h1 class="col-md-12 text-center text-danger px-5 pt-md-5">PROJECTS</h1>
+				<h5 class="text-center px-5">Check out some of my projects i created for fun</h5>
 				<div class="row justify-content-center mt-md-2">
 					<div class="col-md-3 ml-5">
 						<div class="card shadow-lg mb-5 bg-body rounded" style="width: 18rem; background-color: rgb(212,212,212);">
@@ -234,60 +244,60 @@
 					</div>
 				</div>
 			</div>
-			<div id="skills" class="container-fluid p-0 m-0">
-				<h1 class="col-md-12 text-center text-danger pt-5">SKILLS</h1>
+			<div id="skills" class="container-fluid pt-5">
+				<h1 class="col-md-12 text-center text-danger pt-md-5">SKILLS</h1>
 				<br>
 				<div class="row justify-content-center">
 					<label class="col-md-1 text-white">HTML</label>
 						<div class="progress col-md-6">
-							<div class="progress-bar lg bg-dark" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="progress-bar lg bg-danger" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 				</div> <br>
 				<div class="row justify-content-center">
 					<label class="col-md-1 text-white">CSS</label>
 						<div class="progress col-md-6">
-							<div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 				</div><br>
 				<div class="row justify-content-center">
 					<label class="col-md-1 text-white">JAVASCRIPT</label>
 						<div class="progress col-md-6">
-							<div class="progress-bar bg-dark" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 				</div><br>
 				<div class="row justify-content-center">
 						<label class="col-md-1 text-white">JQUERY</label>
 						<div class="progress col-md-6">
-							<div class="progress-bar bg-dark" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 				</div><br>
 				<div class="row justify-content-center">
 					<label class="col-md-1 text-white">MYSQL</label>
 						<div class="progress col-md-6">
-							<div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 				</div><br>
 				<div class="row justify-content-center">
 					<label class="col-md-1 text-white">AJAX</label>
 						<div class="progress col-md-6">
-							<div class="progress-bar bg-dark" role="progressbar" style="width: 50%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 				</div><br>
 				<div class="row justify-content-center">
 						<label class="col-md-1 text-white">LARAVEL</label>
 						<div class="progress col-md-6">
-							<div class="progress-bar bg-dark" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+							<div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 						</div>
 				</div><br>
 				<div class="row justify-content-center pb-5">
 					<label class="col-md-1 text-white">REACT</label>
 					<div class="progress col-md-6">
-					<div class="progress-bar bg-dark" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					<div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div><br>
 			</div>	
 		
-		<div class="container-fluid p-0 m-0" id="about">	
+		<div class="container-fluid pt-md-5" id="about">	
 			<div class="row m-0">
 				<div class="col-md-6 col-12 mt-5 px-5">
 					<img src="<?php echo asset('images/toyosi1.png');?>" class="img-fluid rounded-circle"><br>
@@ -308,6 +318,13 @@
 		<script src="<?php echo asset('js/jquery-3.5.1.min.js');?>"></script>
 		<script src="<?php echo asset('js/popper.min.js');?>"></script>
 		<script src="<?php echo asset('js/bootstrap.js');?>"></script>
+		<script>
+			$('.navs').click(function(){
+				if(screen.width<=576){
+					$('.tug').click();
+				};
+			});
+		</script>
 		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div class="modal-dialog" role="document">
 							    <div class="modal-content">
@@ -350,28 +367,28 @@
 		</div>
 	</div>
 		<div class="row" style="background-color:black;" id="contact">
-			<div class="col-md-6 pt-5 pl-5">
-				<h1 class="text-danger">Contact Me</h1>
-				<p class="text-white text-center">Want to discuss a project, have a job opportunity or freelance opportunity, want a collaboration, want to make enquires or just want to say hi, please do not hesitate to reach out</p>
+			<div class="col-md-6 pt-5 pl-md-5">
+				<h1 class="text-danger text-center">Contact Me</h1>
+				<p class="text-white text-center px-5">Want to discuss a project, have a job opportunity or freelance opportunity, want a collaboration, want to make enquires or just want to say hi, please do not hesitate to reach out</p>
 					<form action="<?php echo url('/submitcontact');?>" method="POST">
 						@csrf
 						<div class="form-group row">
-							<div class="col-md-12 col-10">
+							<div class="col-md-12">
 								<input class="form-control" type="text" id="name" name="name" required placeholder="Enter your Name">
 							</div>
 						</div>
 						<div class="form-group row">
-							<div class="col-md-12 col-10">
+							<div class="col-md-12">
 								<input class="form-control" type="email" id="email" name="email" required placeholder="Enter Your Email">
 							</div>
 						</div>
 						<div class="form-group row">
-							<div class="col-md-12 col-10">
+							<div class="col-md-12">
 								<input class="form-control" type="number" id="phone" name="phone" required placeholder="Enter Your Phone Number">
 							</div>
 						</div>
 						<div class="form-group row">
-							<div class="col-md-12 col-10">
+							<div class="col-md-12">
 								<textarea id="message" name="message" class="form-control" rows="4" cols="20" required placeholder="Enter a message">
 								</textarea>
 							</div>
